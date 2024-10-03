@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: game-app
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: app
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: app
+    spec:
+      containers:
+      - image: alexwhen/docker-2048
+        imagePullPolicy: Always
+        name: app
+        ports:
+        - containerPort: 80
