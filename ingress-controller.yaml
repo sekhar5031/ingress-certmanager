@@ -8,7 +8,7 @@ metadata:
 
 spec:
   rules:
-  - host: cloud.<domain-name>
+  - host: kubernetes.cloudcastnepal.com
     http:
       paths:
         - path: /
@@ -21,5 +21,5 @@ spec:
       
   tls:
       - hosts:
-          - cloud.<domain-name>
+          - kubernetes.cloudcastnepal.com
         secretName: tls-secret
